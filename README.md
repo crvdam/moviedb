@@ -1,4 +1,4 @@
-# movie database
+# Movie database
 
 Vue.js movie database 
 
@@ -9,8 +9,7 @@ Vue.js movie database
 - View movie details, cast, crew and trailer
 - Search movies
 - Infinite scroll
-- Dynamic background based off hero image colors
-(source palette extraction algorithm: https://github.com/zygisS22/color-palette-extraction)
+- Dynamic background based off hero image colors (source palette extraction algorithm: https://github.com/zygisS22/color-palette-extraction)
 
 ## tech
 
