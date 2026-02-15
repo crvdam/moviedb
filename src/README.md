@@ -1,4 +1,4 @@
-# real-estate
+# movie database
 
 Vue.js movie database 
 

@@ -6,8 +6,12 @@
   const store = useMoviesStore();
   const query = ref("");
 
+  let debounceTimeout: ReturnType<typeof setTimeout>;
+
   watch(query, () => {
-    setTimeout(() => {
+    clearTimeout(debounceTimeout);
+    
+    debounceTimeout = setTimeout(() => {
       if (!query.value) {
         store.movies = [];
         store.currentPage = 1;
