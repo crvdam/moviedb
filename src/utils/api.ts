@@ -1,12 +1,12 @@
 import { useMoviesStore } from "@/stores/moviesStore";
 
-const API_BASE = '/.netlify/functions';
+const API_BASE = '/.netlify/functions/fetch-movies';
 
 export async function fetchPopularMovies() {
   const store = useMoviesStore();
   
   try {
-    const res = await fetch(`${API_BASE}/tmdb-proxy?endpoint=movie/popular&page=${store.currentPage}`);
+    const res = await fetch(`${API_BASE}?endpoint=movie/popular&page=${store.currentPage}`);
     const json = await res.json();
     store.movies = store.movies.concat(json.results);
     console.log(store.movies);
@@ -19,7 +19,7 @@ export async function searchMovie(query: string) {
   const store = useMoviesStore();
   
   try {
-    const res = await fetch(`${API_BASE}/tmdb-proxy?endpoint=search/movie&query=${encodeURIComponent(query)}&page=${store.currentPage}`);
+    const res = await fetch(`${API_BASE}?endpoint=search/movie&query=${encodeURIComponent(query)}&page=${store.currentPage}`);
     const json = await res.json();
     store.movies = store.movies.concat(json.results);
   } catch (err) {
@@ -32,7 +32,7 @@ export async function fetchMovieById(id: string) {
   store.movieDetails = '';
   
   try {
-    const res = await fetch(`${API_BASE}/tmdb-proxy?endpoint=movie/${id}`);
+    const res = await fetch(`${API_BASE}?endpoint=movie/${id}`);
     const json = await res.json();
     store.movieDetails = json;
   } catch (err) {
@@ -45,7 +45,7 @@ export async function fetchCreditsById(id: string) {
   store.movieCredits = '';
   
   try {
-    const res = await fetch(`${API_BASE}/tmdb-proxy?endpoint=movie/${id}/credits`);
+    const res = await fetch(`${API_BASE}?endpoint=movie/${id}/credits`);
     const json = await res.json();
     store.movieCredits = json;
   } catch (err) {
@@ -57,7 +57,7 @@ export async function fetchMovieVideosById(id: string) {
   const store = useMoviesStore();
   
   try {
-    const res = await fetch(`${API_BASE}/tmdb-proxy?endpoint=movie/${id}/videos`);
+    const res = await fetch(`${API_BASE}?endpoint=movie/${id}/videos`);
     const json = await res.json();
     store.movieVideos = json;
     console.log(json);
