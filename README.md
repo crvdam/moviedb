@@ -1,45 +1,22 @@
-# movies
+# Movie database
 
-This template should help get you started developing with Vue 3 in Vite.
+Vue.js movie database 
 
-## Recommended IDE Setup
+## features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- themoviedb.org API 
+- View popular movies
+- View movie details, cast, crew and trailer
+- Search movies
+- Infinite scroll
+- Dynamic background based off hero image colors (source palette extraction algorithm: https://github.com/zygisS22/color-palette-extraction)
 
-## Type Support for `.vue` Imports in TS
+## tech
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- Vue.js
+- Typescript
+- Pinia
+- Vue Router
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+## GIF
+![Movies gif](movies.gif)
