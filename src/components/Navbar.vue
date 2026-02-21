@@ -7,11 +7,11 @@
 
 <style scoped lang="scss">
   nav {
-    align-content: center;
+    margin: 1rem 0;
   }
 
   a {
-    margin-left: 25px;
+    margin: 0 1rem;
     color: #ffffffc0;
   }
   

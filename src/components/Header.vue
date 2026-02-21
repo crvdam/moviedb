@@ -14,9 +14,9 @@
       <div class="logo">CCDB</div>
     </RouterLink>
     <Navbar />
-    <Transition name="fade" mode="out-in">
-      <Search v-if="route.name === 'home'"/>
-    </Transition>
+      <Transition name="fade" mode="out-in">
+        <Search v-if="route.name === 'home'"/>
+      </Transition>  
   </header>
 </template>
 
@@ -25,15 +25,17 @@
   
   header {
     position: fixed;
-    display: flex;
-    align-items: center;
+    width: 100%;
+    text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
-    width: 100vw;
     margin: auto;
-    height: 100px;
     padding: 10px;
     z-index: 1;
+  }
+
+  .search-wrapper {
+    width: 100%;
   }
 
   .logo {
@@ -54,6 +56,8 @@
     header {
       max-width: 1400px;
       padding: 10px 30px;
+      display: flex;
+      align-items: center;
     }
   }
 

@@ -50,6 +50,7 @@
   }
 
   .details-poster-trailer {
+    flex-wrap: wrap;
     display: flex;
     justify-content: space-around;
   }

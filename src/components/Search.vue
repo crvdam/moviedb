@@ -26,38 +26,38 @@
 </script>
 
 <template> 
-  <div class="search-wrapper">
-    <img
-      class="search-icon" 
-      src="../assets/icons/ic_search.png" alt="">
+    <div class="input-wrapper">
+      <img
+        class="search-icon" 
+        src="../assets/icons/ic_search.png" alt="">
+        
     <input
-      v-model="query"
-      type="text" 
-      placeholder="Search movie">
-    <img 
-      v-if="query"
-      @click="query = ''" 
-      class="clear-icon"
-      src="../assets/icons/ic_clear.png" alt="">
-  </div>
+        v-model="query"
+        type="text" 
+        placeholder="Search movie">
+      <img 
+        v-if="query"
+        @click="query = ''" 
+        class="clear-icon"
+        src="../assets/icons/ic_clear.png" alt="">
+    </div>
 </template>
 
 <style scoped lang="scss">
-  .search-wrapper {
+  input {
+    border-radius: 15px;
+    height: 40px;
+    width: 100%;
+    padding: 0 40px;
+  }
+  
+  .input-wrapper {
     position: relative;
+    width: 300px;
+    margin: auto;
     display: flex;
     align-items: center;
-    margin-left: auto;
   }
-
-  input {
-    width: 250px;
-    height: 40px;
-    padding: 10px;
-    padding-left: 45px;
-    border-radius: 15px;
-  }
-
   .search-icon, .clear-icon {
     position: absolute;
     height: 30px;
@@ -65,11 +65,12 @@
   }
 
   .search-icon {
-    left: 10px;
+    left: 5px;
+
   }
 
   .clear-icon {
-    right: 10px;
+    right: 5px;
     animation: fade-in 1s;
   }
 
@@ -81,6 +82,13 @@
 
   .clear-icon:active {
     transform: scale(0.9);
+  }
+  
+  @media screen and (min-width: 600px) {
+    .input-wrapper {
+      margin-left: auto;
+      margin-right: unset;
+    }
   }
 
   @keyframes fade-in {
