@@ -33,7 +33,7 @@
   }
   
   .spacer {
-    height: 100px;
+    height: 151px;
   }
   
   .route-transition-enter-active,
@@ -51,5 +51,9 @@
     .container-app {
       max-width: 1400px;
     }
+
+    .spacer {
+    height: 100px;
+  }
   }
 </style>
